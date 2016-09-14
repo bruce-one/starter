@@ -1,31 +1,31 @@
----
-title: 'This is my Site Title'
----
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Site Title {% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title>
+  <title>Bogong Rover Chalet</title>
   <meta charset='UTF-8'/>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <link rel='alternate' type='application/rss+xml' title='RSS' href='SITEURLGOESHERE/blog.rss' />
   <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
-  <link href='{{site.baseurl}}/site.css' rel='stylesheet' />
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Alegreya|Nunito|Material+Icons'>
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/fontawesome/4.6.3/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/spectre.css/0.1.25/spectre.min.css'>
+  <link href='{{site.baseurl}}/css/site.css' rel='stylesheet' />
 </head>
 <body>
-  <div class='container'>
-    <div class='col12 clearfix'>
-      <div class='header col6 margin3 pad4h'>
-        <div class='clearfix col12'>
-          <div class='menu fr'>
-            <a class='{% if page.section == "blog" %}active{% endif %}' href='{{site.baseurl}}/'>Blog</a>
-            <a class='{% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'>About</a>
-            <a href='//github.com/prose/starter'>Fork on GitHub</a>
-          </div>
-          <h1 class='title'><a href='{{site.baseurl}}/'>{{page.title}}</a></h1>
-        </div>
-      </div>
-    </div>
-    {{content}}
-  </div>
-  <script src='{{site.baseurl}}/site.js'></script>
+  {{content}}
+  <!-- <script src='{{site.baseurl}}/js/site.js'></script> -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/drop/1.4.2/css/drop-theme-arrows-bounce-dark.min.css'>
+  <script src='//cdn.jsdelivr.net/g/tether@1.3.7,drop@1.4.2'></script>
+  <script>
+    document.querySelectorAll('[title]:not([title=""])').forEach( (e) => {
+      new Drop({
+        target: e,
+        content: e.title,
+        classes: 'drop-theme-arrows-bounce-dark',
+        openOn: 'ontouchstart' in document.documentElement ? 'click' : 'hover',
+        position: 'top center',
+        constrainToScrollParent: false,
+      })
+      e.title = ''
+    })
+  </script>
 </body>
