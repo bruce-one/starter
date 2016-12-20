@@ -4,4 +4,8 @@ Most weeks are open to anyone over 18 (Scout member or not), although some weeks
 
 [Venturers](#winter-venturer) <i class='material-icons' title='15-18 year old Scouts'>help_outline</i> have three weeks; one of which is specifically for <a href='#winter-interstater'>South Australians</a>.
 
+<!--[Other.](#TODO_OTHER) Not a member of the Scout Association? You're still welcome!  [Find out more.](#TODO_OTHER)-->
+
 External group bookings are also taken, subject to availability. <i class='material-icons' title='Weeks 11 and 12 are usually available.'>help_outline</i>
+
+[How's it work?](#INFO_BASIC)

@@ -1,3 +1,12 @@
-  Winter interstater.
+A week at the Bogong Rover Chalet makes for the highlight of any Rover or
+Venturer year.
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis eget ligula auctor congue. Duis ante purus, feugiat ut tempus vitae, finibus et ipsum. Aliquam mattis leo gravida, pharetra quam vel, vulputate arcu. Nullam pulvinar convallis ex et sollicitudin. Donec enim leo, molestie ac aliquam at, eleifend eget tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+We have a special [SA Venturer Ski Week](#INFO_SA_VENTURER) where we help you
+get here and help sort out all your gear. [Book now.](#BOOK_SA_VENTURER)
+
+Interstaters are welcome to all our other weeks as well!
+
+Bring your whole Venturer Unit or Rover Crew to one of our weeks for the best
+away activity ever; or come on your own, we're still really pumped to have you!
+
+[How's it work?](#INFO_BASIC)

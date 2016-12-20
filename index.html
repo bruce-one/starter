@@ -107,7 +107,7 @@ layout: default
   <article class='article__winter'>
     <div class='row row__not-narrow row--padding'>
       <div>
-        <h4 onclick='this.classList.toggle("expand")' class='narrow-shrink-origin' style='text-align: center;'><span class='desktop-only'><button class='material-icons no-style'>expand_more</button> </span>Dates</h4>
+        <h4 onclick='this.classList.toggle("expand")' class='narrow-shrink-origin' style='text-align: center;'><span class='under-desktop'><button class='material-icons no-style'>expand_more</button> </span>Dates</h4>
         <div class='narrow-shrink'>
           <table class='dates'>
             <tr><td>Vic Snow Venture 1</td><td>Jun 25th – Jul 2nd</td></tr>
@@ -198,27 +198,8 @@ layout: default
         </div>
       </div>
       <div>
-        <h4>Why come in summer</h4>
-        <div>
-          <p>
-            The Bogong Rover Chalet is a beautiful wilderness retreat in Victoria's high country.
-          </p>
-          <p>
-            It's a beautiful setting to have a Group holiday, to have a planning weekend, to come hang out and help with one of our working bees, or just relax and watch the world go by.
-          </p>
-        </div>
-        <h4>Getting there</h4>
-        <p>TODO - short version with a link to the knowledge hub.</p>
-        <h4>How to book</h4>
-        <div>
-          <p>
-            Contact us!<br>
-            Our wonderful bookings team are happy to help you with your booking! Or check out our <a href='#TODO'>information hub</a> to find the answers to any questions you might have.
-          </p>
-          <div>Phone: 0407 CHALET</div>
-          <div>Email: <a href='mailto:bookings@bogongroverchalet.org.au'>bookings@bogongroverchalet.org.au</a></div>
-          <div><a href='https://www.facebook.com/BogongRoverChalet'>Facebook</a></div>
-        </div>
+        {% capture summer %}{% include summer.md %}{% endcapture %}
+        {{ summer | markdownify }}
       </div>
     </div>
   </article>

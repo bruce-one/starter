@@ -32,6 +32,10 @@ $desktop-width: 1024px
   @media (max-width: #{$desktop-width - 1px})
     @content
 
+.under-desktop
+  +desktop
+    display: none
+
 body
   font-size: 18px
   font-family: 'Alegreya', serif
