@@ -30,6 +30,7 @@ layout: default
 <nav class='side-nav'>
   <ul>
     <a data-scroll href='#top' class='dark' style='background-color: green;'>
+
       <li>
         Top
       </li>
@@ -39,12 +40,12 @@ layout: default
         Winter
       </li>
     </a>
-    <a data-scroll href='#winter-venturer' class='dark' style='background-color: maroon;' onclick='var st = document.body.scrollTop; event.preventDefault(); window.location.href = this.href; document.body.scrollTop = st;'>
+    <a data-scroll href='#winter-venturer' class='dark' style='background-color: maroon;'>
       <li>
         Snow Venture
       </li>
     </a>
-    <a data-scroll href='#winter-rover' class='dark' style='background-color: red;' onclick='var st = document.body.scrollTop; event.preventDefault(); window.location.href = this.href; document.body.scrollTop = st;'>
+    <a data-scroll href='#winter-rover' class='dark' style='background-color: red;'>
       <li>
         Ski Moot
       </li>
@@ -87,8 +88,8 @@ layout: default
       </div>
       <div class='cell'>
         <h4>News</h4>
-        <p>Facebook snippet?</p>
-        <p>Quick little snippets that link to FB?</p>
+        {% capture news %}{% include news.md %}{% endcapture %}
+        {{ news | markdownify }}
       </div>
       <div class='cell'>
         <h4>Testimonials</h4>
@@ -135,19 +136,19 @@ layout: default
         <span id='winter-other'></span>
         <ul class='tab tab-block'>
           <li class='tab-item'>
-            <a onclick='var st = document.body.scrollTop; event.preventDefault(); window.location.href = this.href; document.body.scrollTop = st;' href='#winter-overview'>Overview</a>
+            <a href='#winter-overview'>Overview</a>
           </li>
           <li class='tab-item'>
-            <a onclick='var st = document.body.scrollTop; event.preventDefault(); window.location.href = this.href; document.body.scrollTop = st;' href='#winter-venturer'>Venturer</a>
+            <a href='#winter-venturer'>Venturer</a>
           </li>
           <li class='tab-item'>
-            <a onclick='var st = document.body.scrollTop; event.preventDefault(); window.location.href = this.href; document.body.scrollTop = st;' href='#winter-rover'>Rover</a>
+            <a href='#winter-rover'>Rover</a>
           </li>
           <li class='tab-item'>
-            <a onclick='var st = document.body.scrollTop; event.preventDefault(); window.location.href = this.href; document.body.scrollTop = st;' href='#winter-interstater'>Interstater</a>
+            <a href='#winter-interstater'>Interstater</a>
           </li>
           <li class='tab-item'>
-            <a onclick='var st = document.body.scrollTop; event.preventDefault(); window.location.href = this.href; document.body.scrollTop = st;' href='#winter-other'>Other</a>
+            <a href='#winter-other'>Other</a>
           </li>
         </ul>
         <div class='tab-contents' style='padding: 1em;'>
@@ -181,6 +182,17 @@ layout: default
   <article>
     <div class='row row--padding'>
       <div>
+        {% capture summer_left %}{% include summer-left.md %}{% endcapture %}
+        {{ summer_left | markdownify }}
+      </div>
+      <div>
+        {% capture summer_right %}{% include summer-right.md %}{% endcapture %}
+        {{ summer_right | markdownify }}
+      </div>
+    </div>
+    <hr style='max-width: 30em; margin-top: 2em;'>
+    <div class='row row--padding row--center'>
+      <div>
         <h4>Dates</h4>
         <div>
           <i>Below is our table of key Summer dates, but that's not the only time you can visit in Summer!</i>
@@ -196,10 +208,6 @@ layout: default
             </table>
           </div>
         </div>
-      </div>
-      <div>
-        {% capture summer %}{% include summer.md %}{% endcapture %}
-        {{ summer | markdownify }}
       </div>
     </div>
   </article>
@@ -229,5 +237,13 @@ layout: default
 </section>
 <script src='https://rawgit.com/cferdinandi/smooth-scroll/master/dist/js/smooth-scroll.js'></script>
 <script>
-  smoothScroll.init({ easing: 'easeOutQuad' })
+  new SmoothScroll('[data-scroll]', { easing: 'easeOutQuad' })
+  Array.from(document.querySelectorAll('[data-scroll], .tab-item a, .tab-contents a[href^="#"]')).forEach(function(el) {
+    el.onclick = function(event) {
+      var st = document.body.scrollTop
+      event.preventDefault()
+      window.location.href = this.href
+      document.body.scrollTop = st
+    }
+  })
 </script>
